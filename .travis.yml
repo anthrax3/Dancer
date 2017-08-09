@@ -27,7 +27,7 @@ install:
     - cpanm -n --no-skip-satisfied Class::Method::Modifiers YAML::XS || { cat ~/.cpanm/build.log ; false ; }
     - dzil authordeps --missing | cpanm -n --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
     - dzil listdeps --author --missing | cpanm -n --no-skip-satisfied || { cat ~/.cpanm/build.log ; false ; }
-    - cpanm -n Dist::Zilla::App::Command::cover
+    - cpanm -n Devel::Cover::Report::Kritika Dist::Zilla::App::Command::cover
 
 # We do not need sudo. Setting this allows travis to use (Docker) containers on EC2
 sudo: false
